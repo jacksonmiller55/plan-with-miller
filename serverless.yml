@@ -1,0 +1,18 @@
+service: alexa
+
+provider:
+  name: aws
+  stage: ${opt:stage, 'dev'}
+  runtime: nodejs8.10
+
+functions:
+  plan-with-miller:
+    handler: handler.handler
+
+plugins:
+  - '@hewmen/serverless-plugin-typescript'
+  - serverless-offline
+
+package:
+  include:
+    handler.ts

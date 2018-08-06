@@ -1,0 +1,80 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "plan with miller",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AnswerTriviaIntent",
+                    "slots": [
+                        {
+                            "name": "AnswerContext",
+                            "type": "AnswerContext"
+                        }
+                    ],
+                    "samples": [
+                        "{AnswerContext}"
+                    ]
+                },
+                {
+                    "name": "TriviaIntent",
+                    "slots": [],
+                    "samples": [
+                        "play a game of trivia",
+                        "play a game",
+                        "play the trivia game",
+                        "play trivia"
+                    ]
+                },
+                {
+                    "name": "AnswerContext",
+                    "values": [
+                        {
+                            "id": "C",
+                            "name": {
+                                "value": "C",
+                                "synonyms": [
+                                    "c",
+                                    "See",
+                                    "see"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "B",
+                            "name": {
+                                "value": "B",
+                                "synonyms": [
+                                    "Bee",
+                                    "bee",
+                                    "b"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "A",
+                            "name": {
+                                "value": "A"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

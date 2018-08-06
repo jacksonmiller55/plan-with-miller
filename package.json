@@ -1,0 +1,22 @@
+{
+  "name": "test-lambda",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@hewmen/serverless-plugin-typescript": "^1.1.17",
+    "@types/alexa-sdk": "^1.1.1",
+    "@types/aws-lambda": "^8.10.6",
+    "serverless-offline": "^3.25.4",
+    "serverless-plugin-typescript": "^1.1.5"
+  },
+  "dependencies": {
+    "alexa-sdk": "^1.0.25",
+    "aws-sdk": "^2.263.1"
+  }
+}
