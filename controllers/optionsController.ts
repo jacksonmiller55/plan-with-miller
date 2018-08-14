@@ -7,7 +7,7 @@ export class OptionsController extends IntentController {
     }
 
     getOptions(): void {
-        this.handler.emit(':ask', 'get options.', 'get options.');
+        this.handler.emit(':ask', 'To learn more about our offices ask me where are you located?', 'To learn more about our offices ask me where are you located?');
     }
 
 }
