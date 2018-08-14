@@ -3,7 +3,6 @@ export interface TriviaModel {
     question: string;
     answer: string;
     a: string;
-    //TODO: Possibly add type?
     b: string;
     c: string;
 }
