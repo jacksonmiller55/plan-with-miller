@@ -10,7 +10,7 @@ import { getRandomItems, getSlotId} from '../shared/helpers'
 import { characters } from '../shared/ssml.helpers'
 import { Slot } from '../models/slots/slot'
 
-export class GameController extends IntentController {
+export class TriviaController extends IntentController {
     private _database: Database;
     private _triviaModelConverter: ModelConverter<TriviaModel>;
 
