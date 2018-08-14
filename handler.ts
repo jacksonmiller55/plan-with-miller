@@ -1,6 +1,8 @@
 import * as Alexa from 'alexa-sdk';
 import { AmazonController } from './controllers/amazonController';
-import { GameController } from './controllers/gameController';
+import { TriviaController } from './controllers/TriviaController';
+import { OptionsController } from './controllers/optionsController';
+
 
 const handler = function (event: Alexa.RequestBody<Alexa.Request>, context: Alexa.Context, callback: (err: any, response: any) => void): void {
     const alexa = Alexa.handler(event, context, callback);
@@ -12,9 +14,12 @@ const handler = function (event: Alexa.RequestBody<Alexa.Request>, context: Alex
     });
     if (event.session.attributes['flag'] == null){
         alexa.registerHandlers({
-            'TriviaIntent': function () {
+            'PlayTriviaIntent': function () {
                 event.session.attributes['flag'] = 'trivia';
-                new GameController(this).playTrivia();
+                new TriviaController(this).playTrivia();
+            },
+            'GetOptionsIntent': function(){
+                new OptionsController(this).getOptions();
             },
             'AMAZON.HelpIntent': function () {
                 new AmazonController(this).help();
@@ -34,7 +39,7 @@ const handler = function (event: Alexa.RequestBody<Alexa.Request>, context: Alex
         alexa.registerHandlers({
             'AnswerTriviaIntent': function(){
                 //I set the flag back to null only if an answer is given.
-                new GameController(this).answerTrivia();
+                new TriviaController(this).answerTrivia();
             },
             'AMAZON.HelpIntent': function () {
                 new AmazonController(this).help();

@@ -1,7 +1,8 @@
 export enum Intents {
     NewSession = 'NewSession',
-    TriviaIntent = 'TriviaIntent',
+    PlayTriviaIntent = 'PlayTriviaIntent',
     AnswerTriviaIntent = 'AnswerTriviaIntent',
+    GetOptionsIntent = 'GetOptionsIntent',
     HelpIntent = 'HelpIntent',
     CancelIntent = 'CancelIntent',
     StopIntent = 'StopIntent',
